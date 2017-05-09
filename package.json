@@ -1,0 +1,26 @@
+{
+  "name": "corsproxy",
+  "version": "1.0.0",
+  "description": "*Need a way for students to get around CORS issues for front-end only projects?* Just set `apiServerHost` as a Heroku config variable, and have students point their API request to the Heroku-app instead of the API that doesn't support CORS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.13.4",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gSchool/corsproxy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gSchool/corsproxy/issues"
+  },
+  "homepage": "https://github.com/gSchool/corsproxy#readme"
+}
