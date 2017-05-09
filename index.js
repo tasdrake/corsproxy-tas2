@@ -4,8 +4,8 @@ var express = require('express');
 var request = require('request');
 var apiServerHost = process.env.apiServerHost;
 
-var idkey = process.env.X-Yummly-App-ID;
-var apikey = process.env.X-Yummly-App-Key;
+var idkey = process.env.idkey;
+var apikey = process.env.apikey;
 console.log('apikey', apikey);
 console.log('idkey' , idkey);
 
