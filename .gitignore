@@ -1,6 +1,3 @@
 node_modules
 <<<<<<< HEAD
 .env
-=======
-dotenv
->>>>>>> 4f9a4d6d1d13f17a1d98f09cc63b4a90cc65fd89

@@ -1,12 +1,11 @@
 'use strict';
 
-var dotenv = require('dotenv').config();
 var express = require('express');
 var request = require('request');
 var apiServerHost = process.env.apiServerHost;
 
-var idkey = process.env.idkey;
-var apikey = process.env.apikey;
+var idkey = process.env.X-Yummly-App-ID;
+var apikey = process.env.X-Yummly-App-Key;
 console.log('apikey', apikey);
 console.log('idkey' , idkey);
 
@@ -26,6 +25,7 @@ app.use('/', function(req, res) {
     'X-Yummly-App-Key': apikey
   };
 
+  console.log(headers);
   req.pipe(request({url:url, headers:headers})).pipe(res);
 });
 
