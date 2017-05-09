@@ -7,7 +7,8 @@ var apiServerHost = process.env.apiServerHost;
 
 var idkey = process.env.idkey;
 var apikey = process.env.apikey;
-console.log(apikey);
+console.log('apikey', apikey);
+console.log('idkey' , idkey);
 
 var app = express();
 
@@ -19,9 +20,10 @@ app.use(function(req, res, next) {
 
 app.use('/', function(req, res) {
   var url = apiServerHost + req.url;
+  console.log(url);
   var headers = {
-    'x-yummly-app-id': idkey,
-    'x-yummly-app-key': apikey
+    'X-Yummly-App-ID': idkey,
+    'X-Yummly-App-Key': apikey
   };
 
   req.pipe(request({url:url, headers:headers})).pipe(res);
